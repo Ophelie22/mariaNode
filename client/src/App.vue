@@ -2,10 +2,12 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import { ref } from 'vue';
+
 const count = ref(0);
 async function fetchCount() {
   count.value = await (await fetch('/api/count')).json();
 }
+
 fetchCount();
 </script>
 
